@@ -4,6 +4,11 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
+# Streamlit Cloud の Secrets で設定した環境変数を取得
+openai_api_key = os.getenv("OPENAI_API_KEY")
+
+# ChatOpenAI に APIキーを渡す
+llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0, openai_api_key=openai_api_key)
 
 st.title("専門家回答アプリ")
 st.write(
