@@ -3,7 +3,6 @@ from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
 # Streamlit Cloud の Secrets で設定した環境変数を取得
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
