@@ -6,15 +6,6 @@ import os
 # Streamlit Cloud の Secrets から APIキーを取得
 openai_api_key = os.environ.get("OPENAI_API_KEY")
 
-# APIキーが取得できているか確認（デバッグ用）
-st.write("APIキーの取得確認:", bool(openai_api_key))
-
-# ChatOpenAI に APIキーを渡す
-llm = ChatOpenAI(
-    model_name="gpt-4o-mini",
-    temperature=0,
-    openai_api_key=openai_api_key
-)
 
 st.title("専門家回答アプリ")
 st.write(
